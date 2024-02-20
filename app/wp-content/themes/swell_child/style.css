@@ -1,0 +1,516 @@
+@charset "UTF-8";
+/*
+    Template: swell
+    Theme Name: SWELL CHILD
+    Theme URI: https://swell-theme.com/
+    Description: SWELLの子テーマ
+    Version: 1.0.0
+    Author: LOOS WEB STUDIO
+    Author URI: https://loos-web-studio.com/
+
+    License: GNU General Public License
+    License URI: http://www.gnu.org/licenses/gpl.html
+*/
+
+.breadcrumbs{
+    font-size: 11px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    white-space: nowrap;
+    padding-top: 8px;
+}
+
+.breadcrumbs::-webkit-scrollbar{
+    display: none;
+}
+
+@media only screen and (max-width:768px) {
+    .breadcrumbs{
+        font-size: 10px;
+    }
+}
+
+.breadcrumbs .home{
+    padding: 0 6px 0 0;
+}
+
+.breadcrumbs .taxonomy{
+    padding: 0 6px;
+}
+
+.breadcrumbs .post{
+    padding: 0 6px;
+}
+
+/*****************************
+*     フッター固定バナー     *
+*****************************/
+#customize-fixed-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(243 91 2 / 88%);
+	color: #fff;
+	font-size: 18px;
+	transition: 0.2s;
+	z-index: 999;
+}
+#customize-fixed-footer .bold {
+	font-weight: bold;
+}
+#customize-fixed-footer .wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0 12px;
+}
+#customize-fixed-footer .information {
+	margin-right: 30px;
+	line-height: 1.5;
+}
+#customize-fixed-footer .information .text.wide {
+	letter-spacing: 2px;
+}
+#customize-fixed-footer .linkbox .label {
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+#customize-fixed-footer .linkbox .label::before,
+#customize-fixed-footer .linkbox .label::after {
+	display: inline-block;
+	content: '';
+	width: 27px;
+	height: 4px;
+	background-image: radial-gradient(#fff 50%, rgba(255,255,255,0) 58%);
+    background-size: 4px 4px;
+	transform: translate(-5px, -4px) rotate(45deg);
+}
+#customize-fixed-footer .linkbox .label::after {
+	transform: translate(3px, -4px) rotate(-45deg);
+}
+#customize-fixed-footer .linkbox .sp-text {
+	display: none;
+}
+#customize-fixed-footer .linkbox .link {
+	display: block;
+	width: 380px;
+	margin-top: 5px;
+	background-color: #F8FD36;
+	text-align: center;
+	color: #F75B1D;
+	text-decoration: none;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px 1px #b9491a;
+	font-size: 20px;
+	padding: 5px 0 6px;
+}
+#customize-fixed-footer .linkbox .link::after {
+	content: '▲';
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	transform: rotate(90deg);
+	color: #fff;
+	font-size: 10px;
+	background-color: #F75B1D;
+	border-radius: 20px;
+	padding: 2px 6px 4px;
+}
+#customize-fixed-footer #btn-close {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+}
+#customize-fixed-footer #btn-close::before,
+#customize-fixed-footer #btn-close::after {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 25px;
+	height: 2px;
+	background-color: #fff;
+	top: 14px;
+	left: 2px;
+}
+#customize-fixed-footer #btn-close::before {
+	transform: rotate(45deg);
+}
+#customize-fixed-footer #btn-close::after {
+	transform: rotate(-45deg);
+}
+#customize-fixed-footer.closed {
+	bottom: -130px;
+	transition: 0.2s;
+}
+@media only screen and (min-width:960px) {
+	.p-fixBtnWrap {
+		bottom: 120px;
+	}
+}
+@media only screen and (max-width:960px) {
+	#customize-fixed-footer .wrapper {
+		padding: 8px 0 9px;
+	}
+	#customize-fixed-footer .information {
+		display: none;
+	}
+	#customize-fixed-footer .linkbox {
+		width: 92%;
+		margin: 0 auto;
+	}
+	#customize-fixed-footer .linkbox .label {
+		font-size: 15px;
+		line-height: 1.3;
+	}
+	#customize-fixed-footer .linkbox .label::before,
+	#customize-fixed-footer .linkbox .label::after {
+		width: 20px;
+	}
+	#customize-fixed-footer .linkbox .sp-text {
+		display: block;
+		font-size: 15px;
+		text-align: center;
+	}
+	#customize-fixed-footer .linkbox .link {
+		width: 100%;
+		max-width: 360px;
+		margin: 3px auto 0;
+		padding: 1px 28px 2px 10px;
+		font-size: 17px;
+	}
+	#customize-fixed-footer .linkbox .link::after {
+		top: 5px;
+		right: 8px;
+		padding: 1px 5px 3px;
+	}
+	#customize-fixed-footer #btn-close {
+		top: 5px;
+		right: 5px;
+		width: 20px;
+		height: 20px;
+	}
+	#customize-fixed-footer #btn-close::before,
+	#customize-fixed-footer #btn-close::after {
+		width: 16px;
+		top: 9px;
+		left: 1px;
+	}
+	#customize-fixed-footer.closed {
+		bottom: -100px;
+	}
+	.p-fixBtnWrap {
+		bottom: 110px;
+	}
+}
+
+
+/*PCでは無効（改行しない）*/
+.sp{
+    display: none;
+}
+
+/*スマートフォンでは有効（改行する）*/
+@media screen and (max-width:768px) {
+    .sp{
+        display: block;
+    }
+}
+
+
+/*******************************
+*   フランチャイズランキング   *
+*******************************/
+.shop-ranking {
+	margin-top: 60px;
+}
+.shop-ranking .heading {
+	background-color: #ffebb8;
+	border-radius: 20px;
+	text-align: center;
+	padding: 15px 0 10px;
+	max-width: 400px;
+	margin: auto;
+	position: relative;
+}
+.shop-ranking .heading::after {
+	content: '';
+	position: absolute;
+	background-color: #ffebb8;
+	width: 30px;
+	height: 30px;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+	z-index: -1;
+}
+.shop-ranking .heading .text {
+	font-size: 14px;
+	color: #F75B1D;
+	line-height: 1.6;
+}
+.shop-ranking .heading .title {
+	font-weight: bold;
+	font-size: 17px;
+	position: relative;
+}
+.shop-ranking .heading .title::before,
+.shop-ranking .heading .title::after {
+	content: '';
+	position: absolute;
+	width: 28px;
+	height: 2px;
+	background-color: #5e3e00;
+	top: 15px;
+}
+.shop-ranking .heading .title::before {
+	left: 50%;
+	transform: translateX(-150px) rotate(50deg);
+}
+.shop-ranking .heading .title::after {
+	right: 50%;
+	transform: translateX(150px) rotate(-50deg);
+}
+.shop-ranking .content {
+	margin-top: 30px;
+}
+.shop-ranking .content tr:first-of-type td {
+	background-color: #fa9393;
+	text-align: center;
+	font-size: 14px;
+}
+.shop-ranking .content td {
+	border-color: #333!important;
+	position: relative;
+	vertical-align: middle;
+}
+.shop-ranking .content td:first-child {
+	background-color: #fff;
+}
+.shop-ranking .content td.rank {
+	padding: 20px 5px 0 15px;
+}
+.shop-ranking .content td.rank img {
+	width: 42px;
+	min-width: 42px;
+}
+.shop-ranking .content td.rank::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -5px;
+	width: 30px;
+	height: 35px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.shop-ranking .content tr:nth-of-type(2) td.rank::before {
+	background-image: url('./assets/img/rank-1.png');
+}
+.shop-ranking .content tr:nth-of-type(3) td.rank::before {
+	background-image: url('./assets/img/rank-2.png');
+}
+.shop-ranking .content tr:nth-of-type(4) td.rank::before {
+	background-image: url('./assets/img/rank-3.png');
+}
+.shop-ranking .content tr:nth-of-type(5) td.rank::before {
+	background-image: url('./assets/img/rank-4.png');
+}
+.shop-ranking .content tr:nth-of-type(6) td.rank::before {
+	background-image: url('./assets/img/rank-5.png');
+}
+.shop-ranking .content td.name .company {
+	font-size: 11px;
+}
+.shop-ranking .content td.name .business {
+	font-size: 18px;
+}
+.shop-ranking .content td.description {
+	font-size: 14px;
+}
+.shop-ranking .content td.link {
+	width: 116px;
+}
+.shop-ranking .content td.link a {
+	display: block;
+	font-size: 15px;
+}
+.shop-ranking .content td.link .review {
+	color: #2db0f0;
+}
+.shop-ranking .content td.link .business {
+	color: #f95d5d;
+	margin-top: 4px;
+}
+.shop-ranking .foods-route-logo {
+	width: 150px;
+	margin-top: 10px;
+	margin-left: auto;
+}
+@media only screen and (max-width:600px) {
+	.shop-ranking .content {
+		width: 100%;
+		overflow-x: scroll;
+		padding-right: 1px;
+	}
+	.shop-ranking .content table {
+		min-width: 600px;
+	}
+	.shop-ranking .content td {
+		padding: 7px 5px;
+	}
+	.shop-ranking .content tr:first-of-type td {
+		font-size: 12px;
+	}
+	.shop-ranking .content td.rank {
+		padding: 25px 5px 0 7px;
+		width: 50px;
+	}
+	.shop-ranking .content td.rank img {
+		width: 35px;
+		min-width: 35px;
+	}
+	.shop-ranking .content td.rank::before {
+		width: 25px;
+		height: 30px;
+		left: -2px;
+	}
+	.shop-ranking .content td.name .company {
+		font-size: 11px;
+	}
+	.shop-ranking .content td.name .business {
+		font-size: 15px;
+	}
+	.shop-ranking .content td.description {
+		font-size: 12px;
+		background: 0;
+	}
+	.shop-ranking .content td.link {
+		width: 85px;
+	}
+	.shop-ranking .content td.link a {
+		font-size: 12px;
+	}
+}
+
+#interstitial{
+  position: fixed;
+  top:0;
+  z-index: 99999999;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0,0,0,0.6);
+  transition: all 0.5s ease-out;
+}
+
+#interstitial.interstitial-on{
+  visibility: visible!important;
+  opacity: 1;
+}
+
+.interstitial_flex{
+  width: 100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interstitial_wrap{
+  position: relative;
+  box-shadow: 0px 0px 20px #111;
+  width: 400px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 500px) {
+  .interstitial_wrap{
+    width: 80%;
+  }
+}
+
+.interstitial_wrap:hover {
+  cursor: pointer;
+}
+
+.interstitial_wrap > a {
+  color: #000;
+}
+
+.interstitial_wrap > a:hover{
+  opacity: 1;
+}
+
+.interstitial_inner{
+  text-align: center;
+}
+
+.interstitial_image{
+  content: url("./assets/img/popup.png");
+  width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+  .interstitial_image{
+    content: url("./assets/img/popup.png");
+  }
+}
+
+#interstitial_cancel_btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  left: 97.3%;
+  top: -3%;
+}
+
+@media only screen and (max-width: 960px) {
+  #interstitial_cancel_btn {
+    left: 96.3%;
+  }
+
+  @media only screen and (max-width: 400px) {
+    #interstitial_cancel_btn {
+      left: 95.4%;
+      top: -5%;
+    }
+  }
+}
+
+#interstitial_cancel_btn:hover{
+  cursor: pointer;
+}
+
+#interstitial_cancel_btn::before, #interstitial_cancel_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 18px;
+  background: #dfdfdf;
+}
+
+#interstitial_cancel_btn::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+#interstitial_cancel_btn::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
