@@ -78,12 +78,17 @@ while ( have_posts() ) :
 <?php endwhile; ?>
 <?php get_footer(); ?>
 
-<div id="interstitial">
+<?php
+  $popup_slug = get_page_by_path('popup_setting');
+  $popup_id = $popup_slug->ID;
+?>
+
+<div id="interstitial" class="interstitial_event">
   <div class="interstitial_flex">
     <div class="interstitial_wrap">
       <span id="interstitial_cancel_btn"></span>
-      <a href="https://foods-route.jp/lp/selection/delivery-sweets12?utm_source=tapnow&utm_medium=referral&utm_campaign=parfaitparfait" class="interstitial_cta">
-        <div class="interstitial_image"></div>
+      <a href="<?= get_field('popup_url', $popup_id) ?>" class="interstitial_cta">
+        <div class="interstitial_image" style="content: url('<?= get_field('popup_img', $popup_id) ?>');"></div>
       </a>
     </div>
   </div>
