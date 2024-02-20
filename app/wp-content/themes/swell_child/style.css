@@ -458,14 +458,7 @@
 }
 
 .interstitial_image{
-  content: url("./assets/img/popup.png");
   width: 100%;
-}
-
-@media only screen and (max-width: 960px) {
-  .interstitial_image{
-    content: url("./assets/img/popup.png");
-  }
 }
 
 #interstitial_cancel_btn {
