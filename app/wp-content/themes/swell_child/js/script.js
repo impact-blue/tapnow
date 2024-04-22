@@ -43,9 +43,9 @@ jQuery(function($) {
 
     // ターゲットとなる要素を取得
     const targetElement = document.getElementsByTagName('h2');
-    if(targetElement[2]){
+    if(targetElement[1]){
         // H2がページ内にあったら、ターゲット要素をIntersection Observerに追加
-        observer.observe(targetElement[2]);
+        observer.observe(targetElement[1]);
     }
 
     // 余白部分クリックでバナー非表示に
